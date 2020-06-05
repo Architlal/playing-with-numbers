@@ -1,0 +1,49 @@
+#importing modules
+import random
+
+
+#creating a function
+def game() :
+
+    # taking input
+    num = input("guess a number between 1 to 10 :  ")
+
+    # generating a number between 1 to 10
+    num_g = random.randint(1,10)
+
+
+    if num==num_g:
+        print ("you guessed right!!!")
+        prompt = input("play again ??  [y/n] :")
+
+
+        if prompt=='y':
+            game()
+
+
+        elif prompt=='n':
+            print("thanks")
+
+
+        else:
+            print("wrong input")
+
+
+    elif num!=num_g:
+        print ("wrong guess")
+        prompt = input("play again ??  [y/n] :")
+
+
+        if prompt == 'y':
+            game()
+
+
+        elif prompt == 'n':
+            print("Thanks for playing")
+
+
+        else:
+            print("wrong input")
+
+
+game()#executing the function
